@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
+import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, Image, TouchableOpacity, TextInput, ToastAndroid } from 'react-native';
 
 import api from '../../services/api';
 import logoImg from '../../assets/logo2.png';
 import styles from './styles';
 
-export default function Logon () {
+export default function Login () {
     const navigation = useNavigation();
     const [email, setEmail] = useState('');
     const [pwd, setPWD] = useState('');
@@ -21,8 +22,12 @@ export default function Logon () {
             navigation.navigate('Doc', {userId}); // apos realizar logon, navega para a pagina de documentos
         }
         catch (err) {
-            alert('Falha no login, tente novamente.');
+            ToastAndroid.show("Falha no login, tente novamente.", ToastAndroid.SHORT);
         }
+    }
+
+    function navigateToRegister () {
+        navigation.navigate('Register'); // navega para a pagina de registro do Usuário
     }
 
     return (
@@ -47,6 +52,14 @@ export default function Logon () {
                         <Text style={styles.actionText}>Entrar</Text>
                     </TouchableOpacity>
                 </View>
+
+                <TouchableOpacity style={styles.registerButton} onPress={() => navigateToRegister()}>
+                    <FontAwesome name="plus-circle" size={20} color="#FF8552" />
+                    <Text style={styles.registerButtonText}>
+                        Cadastrar-se
+                    </Text>
+                </TouchableOpacity>
+
             </View>
         </View>
     );

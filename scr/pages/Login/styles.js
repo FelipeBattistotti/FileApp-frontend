@@ -22,15 +22,19 @@ export default StyleSheet.create ({
         marginBottom: 16,
         marginTop: 1,
         justifyContent: 'space-between',
+        borderColor: '#FF8552',
+        borderWidth: 0.8,
     },
 
     textInput: {
         borderRadius: 8,
         height: 50,
         width: '100%',
-        padding: 4,
-        borderColor: '#f0f0f5',
-        borderWidth: 0.6,
+        padding: 10,
+        borderColor: '#FF8552',
+        borderWidth: 0.8,
+        marginBottom: 3,
+        fontSize: 16,
     },
 
     actions: {
@@ -52,5 +56,18 @@ export default StyleSheet.create ({
         color: '#FFF',
         fontSize: 15,
         fontWeight: 'bold',
+    },
+
+    registerButton: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginTop: 8,
+    },
+
+    registerButtonText: {
+        color: '#FF8552',
+        fontSize: 15,
+        fontWeight: 'bold',
+        marginLeft: 8,
     },
 });

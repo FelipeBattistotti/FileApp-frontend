@@ -53,7 +53,7 @@ export default function Doc () {
 
     function logout () {
         AsyncStorage.clear();
-        navigation.navigate('Logon'); // volta pra pagina de Logon
+        navigation.navigate('Login'); // volta pra pagina de Login
     }
 
     const uploadDoc = async () => {

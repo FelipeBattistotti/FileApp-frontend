@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Document Manager",
-    "slug": "documentmanager",
+    "name": "File App",
+    "slug": "fileapp",
     "platforms": [
       "ios",
       "android",
