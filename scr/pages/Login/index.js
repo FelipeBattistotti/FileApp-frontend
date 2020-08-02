@@ -18,6 +18,12 @@ export default function Login () {
         try {
             const response = await api.post('session', { email, pwd });
             const userId = response.data.id;
+            const userName = response.data.name;
+
+            setEmail(''); // initializes state
+            setPWD('');   // initializes state
+
+            ToastAndroid.show("Bem vindo " + userName + "  :)", ToastAndroid.SHORT);
             
             navigation.navigate('Doc', {userId}); // apos realizar logon, navega para a pagina de documentos
         }
