@@ -63,6 +63,8 @@ export default StyleSheet.create ({
         borderRadius: 8,
         backgroundColor: '#FFF',
         marginBottom: 16,
+        borderColor: '#FF8552',
+        borderWidth: 0.8,
     },
 
     docProperty: {

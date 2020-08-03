@@ -21,6 +21,8 @@ export default StyleSheet.create ({
         backgroundColor: '#FFF',
         marginBottom: 16,
         marginTop: 35,
+        borderColor: '#FF8552',
+        borderWidth: 0.8,
     },
 
     docPropertyBold: {
@@ -56,6 +58,8 @@ export default StyleSheet.create ({
         borderWidth: 1,
         borderRadius: 5,
         borderColor: '#f0f0f5',
+        borderColor: '#FF8552',
+        borderWidth: 0.8,
     },
 
     contentValue: {
